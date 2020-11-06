@@ -1,5 +1,5 @@
 # ML_From_Scratch
-Simple implementations of Machine Learning algorithms from scratch, pure Python. 
+Simple implementations of Machine Learning algorithms from scratch, pure Python.
 
 Note: The code, comments and text in the Jupyter notebooks are in Spanish. I'll translate it in my free time. I'll also add more from-scratch implementations with time.
 
