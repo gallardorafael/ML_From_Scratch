@@ -34,12 +34,42 @@ def k_fold_cross_val(data, n_folds, k_neighbors, metric):
     # Obteniendo los k_folds
     k_folds = get_k_folds(n_folds, data)
 
-    # Realizando las predicciones
-    accuracies = []
+    # Lista para guardar predicciones y accuracies
+    predictions_list = []
+
     for i in range(n_folds):
         test = k_folds[i]
         train = [sample for n,fold in enumerate(k_folds) for sample in fold if n != i]
-        predictions = classify(train, test, k_neighbors, metric)
-        accuracies.append(accuracy(predictions, False))
 
-    return accuracies
+        # Realizando las predicciones
+        predictions = classify(train, test, k_neighbors, metric)
+
+        # Midiendo la exactitud
+        temp_accuracie = accuracy(predictions, False)
+
+        # Guardando los datos
+        predictions_list.append((predictions, temp_accuracie))
+
+    return predictions_list
+
+# Función que calcula y retorna la precision para los k_folds
+def nb_k_fold_cross_val(data, n_folds, nb_predict):
+    # Obteniendo los k_folds
+    k_folds = get_k_folds(n_folds, data)
+
+    # Lista para guardar predicciones y accuracies
+    predictions_list = []
+
+    for i in range(n_folds):
+        test = k_folds[i]
+        train = [sample for n,fold in enumerate(k_folds) for sample in fold if n != i]
+
+        # Realizando las predicciones
+        predictions = nb_predict(train, test)
+        # Midiendo la exactitud
+        temp_accuracie = accuracy(predictions, False)
+
+        # Guardando los datos
+        predictions_list.append((predictions, temp_accuracie))
+
+    return predictions_list
