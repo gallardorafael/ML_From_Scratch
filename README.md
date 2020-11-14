@@ -7,6 +7,7 @@ Note: The code, comments and text in the Jupyter notebooks are in Spanish. I'll 
 I added a requirements.txt file with all the dependencies. To install, go to the root directory of the project and:
 
 `
+cd ML_From_Scratch/ &&
 pip install -r requirements.txt
 `
 
