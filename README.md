@@ -6,6 +6,7 @@ Implementación de algoritmos de aprendizaje automático desde 0, en Python puro
 ## Dependencias
 He añadido un archivo llamado requirements.txt, que facilitará la instalación de las dependencias del proyecto. Para proceder, hay que ir a la
 carpeta raíz del proyecto y ejecutar lo siguiente:
+
 `
 cd ML_From_Scratch/ &&
 pip install -r requirements.txt
