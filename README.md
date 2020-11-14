@@ -6,9 +6,9 @@ Note: The code, comments and text in the Jupyter notebooks are in Spanish. I'll 
 ## Requirements
 I added a requirements.txt file with all the dependencies. To install, go to the root directory of the project and:
 
-'
+`
 pip install -r requirements.txt
-'
+`
 
 Note: I strongly recommend using a dedicated virtual environment for this project.
 
